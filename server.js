@@ -1,18 +1,11 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+const messages = require('./messages');
 
 // enable parsing of JSON bodies in request
 app.use(express.json());
 app.use(express.static('public'));
-
-// create a list of items
-const messages = {
-  msg_subject: 'Secure software supply chains are great!',
-  msg_body: 'This is my message body.',
-  client: 'VMware',
-  framework: 'Node JS, Express, and EJS'
-};
 
 // define a route to retrieve all items
 app.get('/api/messages', (req, res) => {
@@ -40,5 +33,7 @@ app.listen(port, () => {
 });
 
 
-var server = app.listen(port);
-module.exports = server;
+module.exports = {
+  app,
+  server: app.listen(port)
+};
