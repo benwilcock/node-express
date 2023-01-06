@@ -8,9 +8,7 @@ You can run the server as a standalone app using `npm run server` command in the
 
 ## Running Tests
 
-Some unit tests have been provided which use the Jest unit testing framework. 
-
-From the root folder of the project, run the command `npm test`. Jest will then execute the test quite and report back the unit testing results.
+Some unit tests have been provided which use the Jest unit testing framework. From the root folder of the project, run the command `npm test`. Jest will then execute the test suite and report back the unit testing results.
 
 ## Viewing The Homepage
 
@@ -20,7 +18,7 @@ Point your browser to`http://localhost:3000`
 
 Point your browser to`http://localhost:3000/api/messages` or follow the link on the homepage.
 
-# Dynamically Reload The Local Server On Code Changes
+## Dynamically Reload The Local Server On Code Changes
 
 Nodemon can be used to monitor the source code and dynamically reload the application when there are changes to the server code.
 
