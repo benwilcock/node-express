@@ -33,7 +33,22 @@ nodemon server.js
 
 ## Deploying to Kubernetes as a TAP workload with Tanzu CLI
 
-When you are done developing your app, you can simply deploy it using:
+When you are done developing your app, you can simply deploy it using either:
+
+A full command:
+
+```bash
+tanzu apps workload create node-express --dry-run \
+  --git-repo https://github.com/benwilcock/node-express \
+  --git-branch main \
+  --type web \
+  --label apps.tanzu.vmware.com/has-tests=true \
+  --label app.kubernetes.io/part-of=node-express \
+  --param-yaml testing_pipeline_matching_labels="{'apps.tanzu.vmware.com/pipeline':'test', 'apps.tanzu.vmware.com/language':'nodejs'}" \
+  --annotation autoscaling.knative.dev/minScale=1
+```
+
+Or, the workload file descriptor:
 
 ```
 tanzu apps workload apply -f config/workload.yaml
