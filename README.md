@@ -1,10 +1,24 @@
 # node-express
 
-This is a starter ExpressJs project.
+This is a simple Node JS sample project which uses the Express framework. This project offers a homepage with a customizable message, a health endpoint, and simple REST API.
 
-To setup the project before running for the first time you need to run the command `npm install` to install the projects dependencies. A list of these dependencies can be found in the `package.json` file.
+Before running for the first time you need to install the project dependencies. Run the command `npm install` to install them all. A list of these dependencies can be found in the `package.json` file. They include Express, EJS, and Jest.
 
 You can run the server as a standalone app using `npm run server` command in the root of the project. The server will be listening to request on port `3000`. You can test the server in a browser by accessing `http://localhost:3000` or via `cURL` or `httpie`.
+
+## Running Tests
+
+Some unit tests have been provided which use the Jest unit testing framework. 
+
+From the root folder of the project, run the command `npm test`. Jest will then execute the test quite and report back the unit testing results.
+
+## Viewing The Homepage
+
+Point your browser to`http://localhost:3000`
+
+## Viewing The Messages REST Endpoint
+
+Point your browser to`http://localhost:3000/api/messages` or follow the link on the homepage.
 
 # Dynamically Reload The Local Server On Code Changes
 
@@ -51,7 +65,12 @@ To access the deployed app open the URL shown in your browser.
 This depends on the TAP installation having DNS configured for the Knative ingress.
 
 
-## Customisations
+## Application Endpoints
+
+1. `/`  HTML home page (shows a single page app containing a static image and some text). Contains a link to the source code.
+1. `/api/messages` REST Json [GET] (shows a single hardcoded message as part of a list of messages).
+
+## Code Customisation
 
 For a simple code customization demonstration, in the application code (in the `messages.js` file) change the name of the `client` property in the `messages` object from "VMware" to something else and then commit/redeploy/restart.
 
