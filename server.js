@@ -38,3 +38,7 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
+
+
+var server = app.listen(port);
+module.exports = server;

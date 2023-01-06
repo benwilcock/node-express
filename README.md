@@ -7,6 +7,16 @@ so you can test the server in a browser accessing `http://localhost:3000` or via
 
 Before running the command `npm run server` you need to run `npm install` to
 install the dependencies
+
+# Reload The Local Server On Code Changes
+
+Nodemon can be used to monitor the source code and dynamically reload the application when there are changes to the server code.
+
+```bash
+sudo npm install -g nodemon
+nodemon server.js
+```
+
 # Deploying to Kubernetes
 
 > NOTE: The provided `config/workload.yaml` file uses the Git URL for this sample. When you want to modify the source, you must push the code to your own Git repository and then update the `spec.source.git` information in the `config/workload.yaml` file.
