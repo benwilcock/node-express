@@ -10,17 +10,17 @@ describe('messages', () => {
     it('has a body', () => {
         expect(messages).toHaveProperty('msg_body');
         expect(typeof messages.msg_body).toBe('string');
-      });
-      
-      it('has a client', () => {
+    });
+
+    it('has a client', () => {
         expect(messages).toHaveProperty('client');
         expect(typeof messages.client).toBe('string');
-      });
-      
-      it('has a framework', () => {
+    });
+
+    it('has a framework', () => {
         expect(messages).toHaveProperty('framework');
         expect(typeof messages.framework).toBe('string');
-      });
-      
+    });
+
 });
 

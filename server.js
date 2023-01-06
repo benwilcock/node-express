@@ -17,11 +17,11 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   // render the 'index' template, and pass in a title and message
-  res.render('pages/index', { 
-    title: 'Powered By VMware Tanzu Application Platform', 
+  res.render('pages/index', {
+    title: 'Powered By VMware Tanzu Application Platform',
     client: messages.client,
     framework: messages.framework
-   });
+  });
 });
 
 app.get('/health', (req, res) => {
@@ -33,7 +33,4 @@ app.listen(port, () => {
 });
 
 
-module.exports = {
-  app,
-  server: app.listen(port)
-};
+module.exports = app;

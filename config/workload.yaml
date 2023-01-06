@@ -9,6 +9,6 @@ metadata:
 spec:
   source:
     git:
-      url: https://github.com/benwilcock/node
+      url: https://github.com/benwilcock/node-express.git
       ref:
         branch: main
