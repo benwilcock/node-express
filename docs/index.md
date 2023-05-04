@@ -1,4 +1,4 @@
-# SNode.js Express
+# Node.js Express
 
 This app contains source code for a Node.js ([Express](https://expressjs.com/)) application that can be built and deployed automatically by the Tanzu Application Platform. The app includes a web page created using Express and a basic REST API. This application was initially created using an Accelerator for Node.js applications.
 
