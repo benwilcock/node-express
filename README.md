@@ -27,11 +27,9 @@ sudo npm install -g nodemon
 nodemon server.js
 ```
 
-# Deploying to Kubernetes
+## Deploying to VMware Tanzu Application Platform workload with Tanzu CLI
 
-> NOTE: The provided `config/workload.yaml` file uses the Git URL for this sample. When you want to modify the source, you must push the code to your own Git repository and then update the `spec.source.git` information in the `config/workload.yaml` file.
-
-## Deploying to Kubernetes as a TAP workload with Tanzu CLI
+> NOTE: The provided `config/workload.yaml` file uses the Git URL of this sample. When you want to modify the source, you must push the code to your own Git repository and then update the `spec.source.git` information in the `config/workload.yaml` file.
 
 When you are done developing your app, you can simply deploy it using either:
 
